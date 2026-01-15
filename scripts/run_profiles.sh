@@ -16,7 +16,7 @@ weight_by=mass
 temp_cut='5e5 K'
 nh_cut='0.13 cm**-3'
 
-snap_dir=/scratch/aspadawe/snapshots/HyenasC/L1/SimbaC_L0_Calibration/halo_3224_og_good
+snap_dir=/scratch/aspadawe/snapshots/HyenasC/L1/SimbaC_L1_Calibration/halo_3224_good-correct_jet
 snap_file=snapshot_151
 caesar_dir=$snap_dir/caesar_snap
 caesar_file=caesar_151
@@ -52,14 +52,14 @@ echo $caesar_file
 echo $save_file
 
 
-# echo
-# echo 'CALCULATING PROFILES'
-# echo
+echo
+echo 'CALCULATING PROFILES'
+echo
 
-# python gen_nd_profile_by_halo_id_v2.py --code=$code --snap_file=$snap_dir/$snap_file.hdf5 --caesar_file=$caesar_dir/$caesar_file.hdf5 --halo_ids $halo_ids --save_file=$profiles_dir/"$save_file" --filter=$filter --profile_type=$profile_type --ndim=$ndim --weight_by=$weight_by --xscale=$xscale --temp_cut="$temp_cut" --nh_cut="$nh_cut" $halo_particles $dm_particles $bh_particles $gas_particles $igrm_particles
+python gen_nd_profile_by_halo_id_v2.py --code=$code --snap_file=$snap_dir/$snap_file.hdf5 --caesar_file=$caesar_dir/$caesar_file.hdf5 --halo_ids $halo_ids --save_file=$profiles_dir/"$save_file" --filter=$filter --profile_type=$profile_type --ndim=$ndim --weight_by=$weight_by --xscale=$xscale --temp_cut="$temp_cut" --nh_cut="$nh_cut" $halo_particles $dm_particles $bh_particles $gas_particles $igrm_particles
 
-# echo
-# echo
+echo
+echo
 
 echo
 echo 'CALCULATING EXTRA PROPERTIES OF PROFILES'

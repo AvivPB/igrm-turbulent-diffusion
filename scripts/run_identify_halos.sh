@@ -2,9 +2,10 @@
 
 # module load NiaEnv/2022a gcc/11.3.0 openssl/1.1.1k sqlite/3.35.5 hdf5/1.12.3
 
+module load StdEnv/2023 python/3.13
 source /scratch/aspadawe/igrm-turbulent-diffusion/pyenvs/main/bin/activate
 
-caesar_dir=/scratch/aspadawe/snapshots/HyenasC/L1/SimbaC_L1_Calibration/halo_3224_good-BH_QUENCH_JET_4000/caesar_snap
+caesar_dir=/scratch/aspadawe/snapshots/HyenasC/L1/SimbaC_L1_Calibration/halo_3224_good-correct_jet/caesar_snap
 echo $caesar_dir
 
 snap_nums=151
